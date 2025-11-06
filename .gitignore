@@ -1,0 +1,38 @@
+# Python cache and virtual environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Data files (large / sensitive)
+*.csv
+*.xlsx
+*.pkl
+*.h5
+*.pt
+*.pth
+*.joblib
+*.json
+data/
+datasets/
+generated_data/
+results/
+
+# Logs / temp files
+*.log
+*.tmp
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Browser / Flask related temp files
+instance/
+har_and_cookies/
