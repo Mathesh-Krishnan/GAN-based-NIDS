@@ -14,7 +14,7 @@ load_dotenv()
 app = Flask(__name__)
 
 # Configure the Gemini API
-genai.configure(api_key="AIzaSyAWuVXMmDoe-8CdczbW_Anj5pVwosnDtsA")
+genai.configure(api_key="API Key")
 
 # Initialize the Gemini model
 gemini_model = genai.GenerativeModel("gemini-1.5-flash")
@@ -33,9 +33,9 @@ features = ['Machine', 'DebugSize', 'DebugRVA', 'MajorImageVersion', 'MajorOSVer
 # Email configuration
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
-EMAIL_FROM = os.getenv('EMAIL_FROM')  # e.g., "daminmain@gmail.com"
-EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')  # e.g., "your-app-password"
-EMAIL_TO = 'bashith67@gmail.com'  # Receiver's email
+EMAIL_FROM = os.getenv('EMAIL_FROM')  
+EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')  
+EMAIL_TO = 'bashith67@gmail.com' 
 
 def send_email(prediction, confidence, gemini_response):
     """Send an email with the prediction results."""
@@ -131,4 +131,5 @@ def chat():
     return render_template('chat.html')
 
 if __name__ == '__main__':
+
     app.run(debug=True)
